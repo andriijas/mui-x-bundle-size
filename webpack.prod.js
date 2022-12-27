@@ -16,6 +16,30 @@ module.exports = merge(common(mode), {
   optimization: {
     minimize: true,
     moduleIds: "deterministic",
+    splitChunks: {
+      cacheGroups: {
+        muiX: {
+          name: "mui-x",
+          test: /[\\/]node_modules[\\/]@mui\/x-/,
+          chunks: "all",
+        },
+        mui: {
+          name: "mui",
+          test: /[\\/]node_modules[\\/]@mui\/(?!x-)/,
+          chunks: "all",
+        },
+        react: {
+          name: "react",
+          test: /[\\/]node_modules[\\/]react/,
+          chunks: "all",
+        },
+        vendor: {
+          name: "vendors",
+          test: /[\\/]node_modules[\\/](?!react|@mui|date-fns)/,
+          chunks: "all",
+        },
+      },
+    },
   },
   plugins: [
     new BundleAnalyzerPlugin({

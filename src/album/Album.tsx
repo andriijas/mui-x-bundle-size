@@ -16,17 +16,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { lazy, Suspense } from "react";
 
-//import { DataGridDemo } from "./DataGrid";
-//import { MaterialUIPickers } from "./Datepicker";
-
-const DataGridDemo = lazy(() =>
-  import("./DataGrid").then((module) => ({ default: module.DataGridDemo }))
-);
-const MaterialUIPickers = lazy(() =>
-  import("./Datepicker").then((module) => ({
-    default: module.MaterialUIPickers,
-  }))
-);
+import { DataGridDemo } from "./DataGrid";
+import { MaterialUIPickers } from "./Datepicker";
 
 function Copyright() {
   return (
@@ -152,10 +143,8 @@ export function Album() {
         </Typography>
         <Copyright />
       </Box>
-      <Suspense>
-        <DataGridDemo />
-        <MaterialUIPickers />
-      </Suspense>
+      <DataGridDemo />
+      <MaterialUIPickers />
       {/* End footer */}
     </ThemeProvider>
   );
