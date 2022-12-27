@@ -1,0 +1,44 @@
+{
+  "name": "mui-x-bundle-size",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@emotion/cache": "11.10.5",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/icons-material": "5.11.0",
+    "@mui/material": "5.11.2",
+    "@mui/x-data-grid": "5.17.17",
+    "@mui/x-date-pickers": "5.0.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "date-fns": "2.29.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.20.7",
+    "@babel/preset-env": "7.20.2",
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
+    "@types/react-dom": "^18.0.10",
+    "babel-loader": "9.1.0",
+    "fork-ts-checker-webpack-plugin": "7.2.14",
+    "html-webpack-plugin": "5.5.0",
+    "typescript": "4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "^4.7.0",
+    "webpack-cli": "5.0.1",
+    "webpack-dev-server": "4.11.1",
+    "webpack-merge": "5.8.0"
+  }
+}
